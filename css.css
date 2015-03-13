@@ -1,0 +1,152 @@
+body {
+  background-color: #6E0E0E;
+  font-family: 'Raleway', 'Helvetica Neue', sans-serif;
+
+  /* http://stackoverflow.com/questions/19175664/how-to-make-background-color-of-div-tag-keep-changing-using-jquery */
+}
+
+a {
+  text-decoration: none;
+}
+
+#content {
+  margin-top: 125px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#header {
+  color: #E97070;
+  font-size: 96px;
+  font-weight: bold;
+  margin-bottom: 80px;
+}
+
+#main {
+  font-size: 48px;
+  font-weight: lighter;
+}
+
+#main a {
+  color: #FEBCA3;
+}
+
+.fa-envelope {
+  padding-right: 5px;
+  color: #DB3E3E;
+}
+
+footer {
+  margin-top: 150px;
+  color: white;
+}
+
+footer span {
+  padding: 15px;
+  cursor: pointer;
+}
+
+.selected {
+  color: orange;
+}
+
+@media (min-device-width : 768px) {
+  #header {
+    font-size: 48px;
+    margin-bottom: 30px;
+  }
+
+  #main {
+    font-size: 24px;
+  }
+}
+
+/* animation */
+
+.animate {
+}
+
+.animate_body {
+  -webkit-animation: animate_bg 30s;
+  animation: animate_bg 30s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.animate_header {
+  -webkit-animation: animate_header 30s;
+  animation: animate_header 30s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.animate_main {
+  -webkit-animation: animate_main 30s;
+  animation: animate_main 30s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.animate_env {
+  -webkit-animation: animate_env 30s;
+  animation: animate_env 30s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+@keyframes animate_bg {
+  0%    { background: #542437; }
+  33%   { background: #255867; }
+  66%   { background: #6E0E0E; }
+  100%  { background: #542437; }
+}
+
+@-webkit-keyframes animate_bg {
+  0%    { background: #542437; }
+  33%   { background: #255867; }
+  66%   { background: #6E0E0E; }
+  100%  { background: #542437; }
+}
+
+@keyframes animate_header {
+  0%    { color: #D95B43; }
+  33%   { color: #ACACAC; }
+  66%   { color: #E97070; }
+  100%  { color: #D95B43; }
+}
+
+@-webkit-keyframes animate_header {
+  0%    { color: #D95B43; }
+  33%   { color: #ACACAC; }
+  66%   { color: #E97070; }
+  100%  { color: #D95B43; }
+}
+
+@keyframes animate_main {
+  0%    { color: #ECD078; }
+  33%   { color: #929292; }
+  66%   { color: #FEBCA3; }
+  100%  { color: #ECD078; }
+}
+
+@-webkit-keyframes animate_main {
+  0%    { color: #ECD078; }
+  33%   { color: #929292; }
+  66%   { color: #FEBCA3; }
+  100%  { color: #ECD078; }
+}
+
+@keyframes animate_env {
+  0%    { color: #53777A; }
+  33%   { color: #ACACAC; }
+  66%   { color: #DB3E3E; }
+  100%  { color: #53777A; }
+}
+
+@-webkit-keyframes animate_env {
+  0%    { color: #53777A; }
+  33%   { color: #ACACAC; }
+  66%   { color: #DB3E3E; }
+  100%  { color: #53777A; }
+}
