@@ -1,10 +1,11 @@
 body {
-  background-color: #6E0E0E;
   font-family: 'Raleway', 'Helvetica Neue', sans-serif;
-}
 
-a {
-  text-decoration: none;
+  background-color: #ecf0f1;
+
+  color: #6C7A89;
+  font-weight: 400;
+  font-size: 16px;
 }
 
 #content {
@@ -14,137 +15,82 @@ a {
   text-align: center;
 }
 
-#header {
-  color: #E97070;
-  font-size: 96px;
-  font-weight: bold;
-  margin-bottom: 80px;
+header {
+  margin-bottom: 55px;
 }
 
-#main {
-  font-size: 48px;
-  font-weight: lighter;
+h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 80px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  margin-bottom: 0;
 }
 
-#main a {
-  color: #FEBCA3;
+h1 span {
+  padding-left: 2px;
 }
 
-.fa-envelope {
-  padding-right: 5px;
-  color: #DB3E3E;
+a {
+  color: #768596;
 }
 
-footer {
-  margin-top: 150px;
-  color: white;
+.links {
+  font-size: 24px;
+  cursor: default;
 }
 
-footer span {
-  padding: 15px;
-  cursor: pointer;
+.links a {
+  padding: 10px;
 }
 
-.selected {
-  color: orange;
+.email a {
+  padding: 10px;
 }
 
-@media (min-device-width : 768px) {
-  #header {
-    font-size: 48px;
-    margin-bottom: 30px;
-  }
-
-  #main {
-    font-size: 24px;
-  }
+.email a {
+  text-decoration: none;
+  letter-spacing: 1px;
 }
 
-/* animation */
-
-/*.animate {
+.email a:hover span {
+  color: #e67e22;
 }
 
-.animate_body {
-  -webkit-animation: animate_bg 30s;
-  animation: animate_bg 30s;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
+.github:hover {
+  color: #9b59b6;
 }
 
-.animate_header {
-  -webkit-animation: animate_header 30s;
-  animation: animate_header 30s;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
+.twitter:hover {
+  color: #3498db;
 }
 
-.animate_main {
-  -webkit-animation: animate_main 30s;
-  animation: animate_main 30s;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
+/* fade in icons */
+
+@-webkit-keyframes fade-icons {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
-.animate_env {
-  -webkit-animation: animate_env 30s;
-  animation: animate_env 30s;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
+@-moz-keyframes fade-icons {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
-@keyframes animate_bg {
-  0%    { background: #542437; }
-  33%   { background: #255867; }
-  66%   { background: #6E0E0E; }
-  100%  { background: #542437; }
+@-o-keyframes fade-icons {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
-@-webkit-keyframes animate_bg {
-  0%    { background: #542437; }
-  33%   { background: #255867; }
-  66%   { background: #6E0E0E; }
-  100%  { background: #542437; }
+@keyframes fade-icons {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
-@keyframes animate_header {
-  0%    { color: #D95B43; }
-  33%   { color: #ACACAC; }
-  66%   { color: #E97070; }
-  100%  { color: #D95B43; }
+.links {
+  -webkit-animation: fade-icons 2s;
+  -moz-animation: fade-icons 2s;
+  -o-animation: fade-icons 2s;
+  animation: fade-icons 2s;
 }
-
-@-webkit-keyframes animate_header {
-  0%    { color: #D95B43; }
-  33%   { color: #ACACAC; }
-  66%   { color: #E97070; }
-  100%  { color: #D95B43; }
-}
-
-@keyframes animate_main {
-  0%    { color: #ECD078; }
-  33%   { color: #929292; }
-  66%   { color: #FEBCA3; }
-  100%  { color: #ECD078; }
-}
-
-@-webkit-keyframes animate_main {
-  0%    { color: #ECD078; }
-  33%   { color: #929292; }
-  66%   { color: #FEBCA3; }
-  100%  { color: #ECD078; }
-}
-
-@keyframes animate_env {
-  0%    { color: #53777A; }
-  33%   { color: #ACACAC; }
-  66%   { color: #DB3E3E; }
-  100%  { color: #53777A; }
-}
-
-@-webkit-keyframes animate_env {
-  0%    { color: #53777A; }
-  33%   { color: #ACACAC; }
-  66%   { color: #DB3E3E; }
-  100%  { color: #53777A; }
-}*/
