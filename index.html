@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="css.css">
 </head>
 
-<body class="animate_body">
+<body>
   <div id="content">
     <div id="header" class="animate_header">
       <p>didehvar.co.uk</p>
@@ -36,97 +36,124 @@
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="jquery.keyframes.min.js"></script>
   <script>
-  function animationsPaused() {
-    return $('.toggle_animation i').hasClass('fa-play');
-  }
+  $.keyframe.define([{
+    name: 'default-bg',
+    '0%': { background: '#542437' },
+    '30%': { background: '#255867' },
+    '60%': { background: '#6E0E0E' },
+    '100%': { background: '#542437' }
+  }]);
 
-  function toggleAnimations() {
-    if (animationsPaused()) {
-      console.log('playing animation');
-
-      $('.toggle_animation i').removeClass('fa-play');
-      $('.toggle_animation i').addClass('fa-pause');
-
-      $('body').addClass('animate_body');
-      $('#header').addClass('animate_header');
-      $('#main a').addClass('animate_main');
-      $('#main a i').addClass('animate_env');
-
-      $('.animate_body').css('-webkit-animation-play-state', '');
-      $('.animate_header').css('-webkit-animation-play-state', '');
-      $('.animate_main').css('-webkit-animation-play-state', '');
-      $('.animate_env').css('-webkit-animation-play-state', '');
-    } else {
-      console.log('pausing animation');
-
-      $('.toggle_animation i').addClass('fa-play');
-      $('.toggle_animation i').removeClass('fa-pause');
-
-      $('.animate_body').css('-webkit-animation-play-state', 'paused');
-      $('.animate_header').css('-webkit-animation-play-state', 'paused');
-      $('.animate_main').css('-webkit-animation-play-state', 'paused');
-      $('.animate_env').css('-webkit-animation-play-state', 'paused');
-
-      $('body').removeClass('animate_body');
-      $('#header').removeClass('animate_header');
-      $('#main a').removeClass('animate_main');
-      $('#main a i').removeClass('animate_env');
-    }
-  }
-
-  function switchOffAnimations() {
-    if (!animationsPaused()) {
-      console.log('removing classes');
-
-      return toggleAnimations();
-    }
-  }
+  $.keyframe.define([{
+    name: 'trapdoor-sequence',
+    '0%': {'height': '70px'},
+    '30%': {'height': '10px'},
+    '60%': {'height': '30px'},
+    '100%': {'height': '10px'}
+  }]);
 
   $(function() {
-    $('.toggle_animation').click(function() {
-      toggleAnimations();
-    });
+    $('#main').playKeyframe(
+      'trapdoor-sequence 1000 linear 0 infinite normal forwards',
+      complete
+    );
 
-    $('.click_one').click(function() {
-      switchOffAnimations();
-
-      $('body').css('background-color', '#542437');
-      $('#header').css('color', '#D95B43');
-      $('#main a').css('color', '#ECD078');
-      $('.fa-envelope').css('color', '#53777A');
-
-      $('.click_one').addClass('selected');
-      $('.click_two').removeClass('selected');
-      $('.click_tri').removeClass('selected');
-    });
-
-    $('.click_two').click(function() {
-      switchOffAnimations();
-
-      $('body').css('background-color', '#255867');
-      $('#header').css('color', '#ACACAC');
-      $('#main a').css('color', '#929292');
-      $('.fa-envelope').css('color', '#ACACAC');
-
-      $('.click_one').removeClass('selected');
-      $('.click_two').addClass('selected');
-      $('.click_tri').removeClass('selected');
-    });
-
-    $('.click_tri').click(function() {
-      switchOffAnimations();
-
-      $('body').css('background-color', '#6E0E0E');
-      $('#header').css('color', '#E97070');
-      $('#main a').css('color', '#FEBCA3');
-      $('.fa-envelope').css('color', '#DB3E3E');
-
-      $('.click_one').removeClass('selected');
-      $('.click_two').removeClass('selected');
-      $('.click_tri').addClass('selected');
-    });
+    // $('#header').playKeyframe({
+    //   name: 'default-bg',
+    //   duration: 30000,
+    //   repeat: 'infinite'
+    // });
   });
+
+  // function animationsPaused() {
+  //   return $('.toggle_animation i').hasClass('fa-play');
+  // }
+  //
+  // function toggleAnimations() {
+  //
+  //   if (animationsPaused()) {
+  //     console.log('playing animation');
+  //
+  //     $('.toggle_animation i').removeClass('fa-play');
+  //     $('.toggle_animation i').addClass('fa-pause');
+  //
+  //   } else {
+  //     console.log('pausing animation');
+  //
+  //     $('.toggle_animation i').addClass('fa-play');
+  //     $('.toggle_animation i').removeClass('fa-pause');
+  //
+  //     $('body').playKeyFrame({
+  //       name: 'thought-provoking-bg',
+  //       duration: 1
+  //     });
+  //
+  //     // $('.animate_body').css('-webkit-animation-play-state', 'paused');
+  //     // $('.animate_header').css('-webkit-animation-play-state', 'paused');
+  //     // $('.animate_main').css('-webkit-animation-play-state', 'paused');
+  //     // $('.animate_env').css('-webkit-animation-play-state', 'paused');
+  //     //
+  //     // $('body').removeClass('animate_body');
+  //     // $('#header').removeClass('animate_header');
+  //     // $('#main a').removeClass('animate_main');
+  //     // $('#main a i').removeClass('animate_env');
+  //   }
+  // }
+//
+  // function switchOffAnimations() {
+  //   if (!animationsPaused()) {
+  //     console.log('removing classes');
+  //
+  //     return toggleAnimations();
+  //   }
+  // }
+  //
+  // // $(function() {
+  // //   $('.toggle_animation').click(function() {
+  // //     toggleAnimations();
+  // //   });
+  // //
+  // //   $('.click_one').click(function() {
+  // //     switchOffAnimations();
+  // //
+  // //     $('body').css('background-color', '#542437');
+  // //     $('#header').css('color', '#D95B43');
+  // //     $('#main a').css('color', '#ECD078');
+  // //     $('.fa-envelope').css('color', '#53777A');
+  // //
+  // //     $('.click_one').addClass('selected');
+  // //     $('.click_two').removeClass('selected');
+  // //     $('.click_tri').removeClass('selected');
+  // //   });
+  // //
+  // //   $('.click_two').click(function() {
+  // //     switchOffAnimations();
+  // //
+  // //     $('body').css('background-color', '#255867');
+  // //     $('#header').css('color', '#ACACAC');
+  // //     $('#main a').css('color', '#929292');
+  // //     $('.fa-envelope').css('color', '#ACACAC');
+  // //
+  // //     $('.click_one').removeClass('selected');
+  // //     $('.click_two').addClass('selected');
+  // //     $('.click_tri').removeClass('selected');
+  // //   });
+  // //
+  // //   $('.click_tri').click(function() {
+  // //     switchOffAnimations();
+  // //
+  // //     $('body').css('background-color', '#6E0E0E');
+  // //     $('#header').css('color', '#E97070');
+  // //     $('#main a').css('color', '#FEBCA3');
+  // //     $('.fa-envelope').css('color', '#DB3E3E');
+  // //
+  // //     $('.click_one').removeClass('selected');
+  // //     $('.click_two').removeClass('selected');
+  // //     $('.click_tri').addClass('selected');
+  // //   });
+  // // });
   </script>
 </body>
 </html>

@@ -1,8 +1,6 @@
 body {
   background-color: #6E0E0E;
   font-family: 'Raleway', 'Helvetica Neue', sans-serif;
-
-  /* http://stackoverflow.com/questions/19175664/how-to-make-background-color-of-div-tag-keep-changing-using-jquery */
 }
 
 a {
@@ -64,7 +62,7 @@ footer span {
 
 /* animation */
 
-.animate {
+/*.animate {
 }
 
 .animate_body {
@@ -149,4 +147,4 @@ footer span {
   33%   { color: #ACACAC; }
   66%   { color: #DB3E3E; }
   100%  { color: #53777A; }
-}
+}*/
