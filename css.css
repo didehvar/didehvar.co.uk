@@ -3,7 +3,7 @@ body {
 
   background-color: #ecf0f1;
 
-  color: #6C7A89;
+  color: #6c7a89;
   font-weight: 400;
   font-size: 16px;
 }
@@ -19,6 +19,15 @@ header {
   margin-bottom: 55px;
 }
 
+header a {
+  color: #6c7a89;
+  text-decoration: none;
+}
+
+header a:hover small {
+  color: #9b59b6;
+}
+
 h1 {
   font-family: 'Oswald', sans-serif;
   font-size: 80px;
@@ -28,12 +37,12 @@ h1 {
   margin-bottom: 0;
 }
 
-h1 span {
-  padding-left: 2px;
+h1 small {
+  font-size: 26px;
 }
 
-a {
-  color: #768596;
+h1 span {
+  padding-left: 2px;
 }
 
 .links {
@@ -45,21 +54,8 @@ a {
   padding: 10px;
 }
 
-.email a {
-  padding: 10px;
-}
-
-.email a {
-  text-decoration: none;
-  letter-spacing: 1px;
-}
-
-.email a:hover span {
-  color: #e67e22;
-}
-
 .github:hover {
-  color: #9b59b6;
+  color: #e67e22;
 }
 
 .twitter:hover {
@@ -93,4 +89,81 @@ a {
   -moz-animation: fade-icons 2s;
   -o-animation: fade-icons 2s;
   animation: fade-icons 2s;
+}
+
+/* fade in header email parts */
+
+@-webkit-keyframes fade-email {
+  0% {
+    opacity: 0;
+    -moz-transform: translate3d(0, 20px, 0);
+    -ms-transform: translate3d(0, 20px, 0);
+    -webkit-transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 20px, 0);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: none;
+    -ms-transform: none;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@-moz-keyframes fade-email {
+  0% {
+    opacity: 0;
+    -moz-transform: translate3d(0, 20px, 0);
+    -ms-transform: translate3d(0, 20px, 0);
+    -webkit-transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 20px, 0);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: none;
+    -ms-transform: none;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@-o-keyframes fade-email {
+  0% {
+    opacity: 0;
+    -moz-transform: translate3d(0, 20px, 0);
+    -ms-transform: translate3d(0, 20px, 0);
+    -webkit-transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 20px, 0);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: none;
+    -ms-transform: none;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fade-email {
+  0% {
+    opacity: 0;
+    -moz-transform: translate3d(0, 20px, 0);
+    -ms-transform: translate3d(0, 20px, 0);
+    -webkit-transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 20px, 0);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: none;
+    -ms-transform: none;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+header a small {
+  -webkit-animation: fade-email 2s;
+  -moz-animation: fade-email 2s;
+  -o-animation: fade-email 2s;
+  animation: fade-email 2s;
 }
