@@ -52,11 +52,15 @@ h1 span {
 }
 
 .github:hover {
-  color: #e67e22;
+  color: #555555;
 }
 
 .twitter:hover {
-  color: #3498db;
+  color: #55acee;
+}
+
+.linkedin:hover {
+  color: #00a0dc;
 }
 
 /* fade in icons */
